@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <title>Vietnamese Music</title>
+</head>
+
+<body>
+  <!-- Thanh điều hướng -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="genres.html">Genres</a>
+    <a href="charity.html">Charity</a>
+    <a href="spotify.html">Spotify</a>
+	<a href="vietnamese.html">Vietnamese</a>
+	<div class="dropdown-content">
+        <a href="MV.html">MV</a>
+        <a href="Artist.html">Artist</a>
+      </div>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Tiêu đề chính -->
+  <h1 class="header-title">Vietnamese Music</h1>
+
+  <!-- Tiêu đề phụ -->
+  <h3 class="sub-section-title">Discover the Vibrant Music Scene of Vietnam</h3>
+
+  <!-- Lời dẫn -->
+  <div class="intro-text">
+    <p>
+      Vietnamese pop music is filled with talented singers and musicians, 
+      from traditional ballads to urban hip-hop beats and EDM riffs. 
+      Here are some of the stars who are redefining the pop genre in Vietnam.
+    </p>
+  </div>
+
+	
+  <!-- Carousel for Artists -->
+  <div class="carousel">
+    <h3>Artist Carousel</h3>
+    <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="carousel-inner" id="carouselInner">
+        <img src="image/img_son_tung.png" alt="Son Tung M-TP">
+        <img src="image/img_min.png" alt="MIN">
+        <img src="image/img_my_tam.png" alt="My Tam">
+        <img src="image/img_soobin.png" alt="Soobin Hoang Son">
+        <img src="image/img_huong_tram.png" alt="Huong Tram">
+        <img src="image/img_only_c.png" alt="Only C">
+        <img src="image/img_dong_nhi.png" alt="Dong Nhi">
+        <img src="image/img_justaTee.png" alt="JustaTee">
+        <img src="image/img_karik.png" alt="Karik">
+        <img src="image/img_hoang_thuy_linh.png" alt="Hoang Thuy Linh">
+    </div>
+    <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+<script>
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+        const images = document.querySelectorAll('.carousel-inner img');
+        const totalImages = images.length;
+
+        // Update current index based on direction
+        currentIndex += direction;
+
+        // Loop around if we go out of bounds
+        if (currentIndex < 0) {
+            currentIndex = totalImages - 1;
+        } else if (currentIndex >= totalImages) {
+            currentIndex = 0;
+        }
+
+        // Calculate the translateX value to slide images
+        const offset = -currentIndex * 100; // Chỉ hiển thị một ảnh
+        document.getElementById('carouselInner').style.transform = `translateX(${offset}%)`;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Contact</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="genres.html">Genres</a>
+    <a href="charity.html">Charity</a>
+    <a href="spotify.html">Spotify</a>
+   
+    <div class="dropdown">
+        <a href="vietnamese.html" class="dropbtn">Vietnam</a>
+        <div class="dropdown-content">
+            <a href="vpop.html">Vpop</a>
+            <a href="rock.html">Rock</a>
+            <a href="hiphop.html">Hiphop</a>
+            <a href="karaoke.html">Karaoke</a>
+        </div>
+    </div>
+    <a href="contact.html" class="current-page">Contact</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="contact-container">
+    <h1 class="header-title">Contact Us</h1>
+    <p class="intro-text">
+      We’d love to hear from you! Whether you have questions, suggestions, or just want to say hello, please use the form below to get in touch with us.
+    </p>
+
+    <h3 style="font-size: 24px; margin-top: 20px;">Newsletter Registration Form</h3>
+
+    <!-- Contact Form -->
+    <form class="contact-form" action="#" method="post">
+      <fieldset>
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address :</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number :</label>
+          <input type="text" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-group" for="country">Country of Residence: </label>
+          <select class="form-control" id="country" name="country" required>
+            <option value="">---Select---</option>
+            <option value="vietnam">Vietnam</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="australia">Australia</option>
+          </select>
+        </div>
+		</fieldset>
+		<fieldset>
+        <div>
+          <label class="form-group">Do you love music?</label>
+          <div class="form-option">
+            <label class="form-group">
+              <input id="love_music" name="love_music" type="radio" value="Yes">
+              Yes
+            </label>
+          </div>
+          <div class="form-option">
+            <label class="form-group">
+              <input id="love_music" name="love_music" type="radio" value="No">
+              No
+            </label>
+          </div>
+        </div>
+
+ 
+          <div class="form-group">
+            <label class="form-group">Which are your Favorite music genres ?</label>
+            <div class="form-option">
+              <label class="form-check-label">
+                <input id="music-genre_rock" name="music-genre" type="checkbox" value="Rock">
+                Rock
+              </label>
+            </div>
+            <div class="form-option">
+              <label class="form-check-label">
+                <input id="music-genre_pop" name="music-genre" type="checkbox" value="Pop">
+                Pop
+              </label>
+            </div>
+            <div class="form-option">
+              <label class="form-check-label">
+                <input id="music-genre_jazz" name="music-genre" type="checkbox" value="Jazz">
+                Jazz
+              </label>
+            </div>
+            <div class="form-option">
+              <label class="form-check-label">
+                <input id="music-genre_Classical" name="music-genre" type="checkbox" value="Classical">
+                Classical
+              </label>
+            </div>
+            <div class="form-option">
+              <label class="form-check-label">
+                <input id="music-genre_Country" name="music-genre" type="checkbox" value="Country">
+                Country
+              </label>
+            </div>
+            <div class="form-option">
+              <label class="form-check-label">
+                <input id="music-genre_other" name="music-genre" type="checkbox" value="Other">
+                Other
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="instruments">Who are your favorite singers?</label>
+            <textarea id="singers" name="singers" rows="2" placeholder="E.g. SontungMTP, Jack, Alan Walker"></textarea>
+          </div>
+       
+
+          <div class="form-group">
+            <label for="instruments">What musical instruments do you play? (optional)</label>
+            <textarea id="instruments" name="instruments" rows="4" placeholder="E.g. guitar, piano, drums"></textarea>
+          </div>
+      </fieldset>
+
+      <!-- Submit Button -->
+      
+	  <div class="submit-container">
+        <button type="submit" class="submit-btn">Subscribe</button>
+		</div>
+      
+	  
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="image/img_logo.png" alt="Group 4 Logo" class="logo-img">
+      </div>
+
+      <!-- Student List -->
+      <div class="student-list">
+        <p>Group 4 - Members:</p>
+        <table>
+          <tr>
+            <td>Nguyễn Thị Việt An - 11220045</td>
+            <td>Lê Quỳnh Anh - 11220265</td>
+          </tr>
+          <tr>
+            <td>Lâm Tuấn Hưng - 11222603</td>
+            <td>Cao Tiến Phúc - 11225128</td>
+          </tr>
+          <tr>
+            <td>Phan Thị Phương Thảo - 11225967</td>
+            <td>Dương Thị Thư - 11226075</td>
+          </tr>
+        </table>
+      </div>
+
+      <p class="footer-note">2024 Music Haven - Feel the Beat, Live the Rhythm</p>
+    </div>
+  </footer>
+</body>
+</html>
