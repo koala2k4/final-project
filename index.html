@@ -1,86 +1,108 @@
 <!doctype html>
-<html>
+<html lang="vi">
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Home - Music Haven</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Home - Music Haven</title>
 </head>
 
 <body>
-  <!-- Thanh điều hướng -->
-  <div class="navbar">
-    <a href="index.html" class="active-home">Home</a>
-    <a href="genres.html">Genres</a>
-    <a href="charity.html">Charity</a>
-    <a href="spotify.html">Spotify</a>
-
-	
-    <div class="dropdown">
-        <a href="vietnamese.html" class="dropbtn">Vietnam</a>
-        <div class="dropdown-content">
-            <a href="vpop.html">Vpop</a>
-            <a href="rock.html">Rock</a>
-            <a href="hiphop.html">Hiphop</a>
-            <a href="karaoke.html">Karaoke</a>
+    <!-- Thanh điều hướng -->
+    <div class="navbar">
+        <a href="index.html" class="active-home">Home</a>
+        <a href="genres.html">Genres</a>
+        <a href="charity.html">Charity</a>
+        <a href="spotify.html">Spotify</a>
+        <div class="dropdown">
+            <a href="vietnamese.html" class="dropbtn">Vietnam</a>
+            <div class="dropdown-content">
+                <a href="vpop.html">Vpop</a>
+                <a href="rock.html">Rock</a>
+                <a href="hiphop.html">Hiphop</a>
+                <a href="karaoke.html">Karaoke</a>
+            </div>
         </div>
+        <a href="contact.html">Contact</a>
     </div>
 
-    <a href="contact.html">Contact</a>
+    <!-- Tiêu đề chính -->
+    <header class="header-container">
+        <h1 class="header-title">Welcome to Music Haven</h1>
+    </header>
+
+     <!-- Giới thiệu -->
+     <div class="introduction-box">
+      <h2>About Group 4 </h2>
+      <p>Group 4 – a dynamic team of six brilliant individuals who blend humor, wit, and charm with sheer intelligence! Each member is not only strikingly attractive but also academically gifted, known for their dedication and sense of responsibility. They navigate every task with a winning mix of creativity and flair. Whether it’s brainstorming the next big idea or diving into complex challenges, this group never fails to dazzle with their talent, laughter, and a touch of glamour. Truly, a powerhouse team that’s as delightful as they are capable!</p>
   </div>
 
-  <!-- Tiêu đề chính -->
-  <header>
-    <h1 class="header-title">Welcome to Music Haven</h1>
-  </header>
+    <!-- Carousel cho nghệ sĩ -->
+  <div class="carousel">
+    <h3>Our Members</h3>
+    <div class="carousel-images">
+      <img src="image/An.png" alt="An">
+      <img src="image/thu.png" alt="thu">
+      <img src="image/thao.png" alt="thao">
+      <img src="image/quin.png" alt="quin">
+      <img src="image/phuc.png" alt="phuc">
+      <img src="image/hung.png" alt="hung">
 
-  <!-- Nội dung chính -->
-  <main>
-    <!-- Thêm tiêu đề phụ -->
-    <h3 class="sub-section-title">Experience the World of Music</h3>
-
-    <!-- Ảnh và chú thích -->
-    <div class="image-container">
-      <img src="image/img_home_1.jpg" alt="Music Word Art" class="centered-img">
-      <h2 class="section-title">Why Music Matters</h2>
     </div>
+    <button class="carousel-button prev" onclick="moveSlide(-1)">Prev</button>
+    <button class="carousel-button next" onclick="moveSlide(1)">Next</button>
+  </div>
 
-    <!-- Thêm đoạn mô tả -->
-    <div class="centered-text">
-      <p>
-        Music brings people together, whether it’s through shared playlists, live concerts, or personal moments with your favorite song. 
-        It transcends language, culture, and even time, uniting us in joy, sadness, love, and inspiration.
-      </p>
-    </div>
-  </main>
-
-  <!-- Chân trang -->
-  <footer class="footer">
-    <div class="footer-content">
-      <!-- Logo -->
-      <div class="footer-logo">
-        <img src="image/img_logo.png" alt="Group 4 Logo" class="logo-img">
-      </div>
-
-      <!-- Danh sách sinh viên -->
-      <div class="student-list">
-        <p>Group 4 - Members:</p>
-        <table>
-          <tr>
-            <td>Nguyễn Thị Việt An - 11220045</td>
-            <td>Lê Quỳnh Anh - 11220265</td>
-          </tr>
-          <tr>
-            <td>Lâm Tuấn Hưng - 11222603</td>
-            <td>Cao Tiến Phúc - 11225128</td>
-          </tr>
-          <tr>
-            <td>Phan Thị Phương Thảo - 11225967</td>
-            <td>Dương Thị Thư - 11226075</td>
-          </tr>
-        </table>
-      </div>
-
-      <p class="footer-note">© 2024 Music Haven - Feel the Beat, Live the Rhythm</p>
-    </div>
-  </footer>
-</body>
-</html>
+    <!-- Chân trang -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="image/img_logo.png" alt="Group 4 Logo" class="logo-img">
+            </div>
+            <div class="student-list">
+                <p>Group 4 - Members:</p>
+                <table>
+                    <tr>
+                        <td>Nguyễn Thị Việt An - 11220045</td>
+                        <td>Lê Quỳnh Anh - 11220265</td>
+                    </tr>
+                    <tr>
+                        <td>Lâm Tuấn Hưng - 11222603</td>
+                        <td>Cao Tiến Phúc - 11225128</td>
+                    </tr>
+                    <tr>
+                        <td>Phan Thị Phương Thảo - 11225967</td>
+                        <td>Dương Thị Thư - 11226075</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="footer-note">© 2024 Music Haven - Feel the Beat, Live the Rhythm</p>
+        </div>
+    </footer>
+    <script>
+      // JavaScript cho chức năng carousel
+      let currentIndex = 0;
+      const images = document.querySelectorAll('.carousel-images img');
+  
+      function showSlide(index) {
+        if (index >= images.length/2) {
+          currentIndex = 0; // Reset về hình ảnh đầu tiên
+        } else if (index < 0) {
+          currentIndex = images.length - 1; // Về hình ảnh cuối cùng
+        } else {
+          currentIndex = index;
+        }
+        const offset = -currentIndex * 100; // Mỗi hình ảnh chiếm toàn bộ chiều rộng
+        document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+      }
+  
+      function moveSlide(direction) {
+        showSlide(currentIndex + direction);
+      }
+  
+      // Hiển thị hình ảnh đầu tiên khi tải
+      showSlide(currentIndex);
+    </script>
+  </body>
+  </html>
+  

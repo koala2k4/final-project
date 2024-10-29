@@ -1,39 +1,49 @@
 /* ----- Tổng thể ----- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Circular Std', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFC0CB; /* Nền hồng */
-    color: #008000; /* Chữ xanh lá */
+    background-color: #FFE4E1; /* Nền hồng pastel */
+    color: #4A4A4A; /* Chữ xám đậm */
     text-align: center; /* Căn giữa nội dung */
+    margin-top: 60px; /* Đặt khoảng cách cho thanh điều hướng cố định */
 }
 
 /* ----- Thanh điều hướng và Dropdown ----- */
 
 /* Thanh điều hướng */
 .navbar {
-    background-color: #FF69B4; /* Hồng đậm */
+    background-color: #FFc0cb; /* Nền hồng đậm */
     overflow: visible;
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    border-radius: 8px; /* Bo góc cho thanh điều hướng */
+    box-shadow: 0 2px 8px #000000; /* Đổ bóng nhẹ cho thanh điều hướng */
+    position: fixed; /* Cố định thanh điều hướng */
+    top: 0; /* Đặt thanh điều hướng ở trên cùng */
+    left: 0; /* Đặt thanh điều hướng ở bên trái */
+    right: 0; /* Đặt thanh điều hướng ở bên phải */
+    z-index: 1000; /* Đảm bảo thanh điều hướng ở trên cùng */
 }
 
 .navbar a, .dropbtn {
     display: inline-block;
-    color: #008000;
+    color: #2C3E50; /* Chữ xanh navy */
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
     margin: 0 5px;
     font-size: 16px;
-    background-color: #FF69B4;
+    background-color: #FFc0cb; /* Nền hồng đậm */
     border: none;
-    transition: background-color 0.3s ease;
+    border-radius: 4px; /* Bo góc cho các nút */
+    transition: background-color 0.3s ease, transform 0.2s; /* Thêm hiệu ứng chuyển đổi cho nút */
 }
 
 .navbar a:hover, .dropbtn:hover {
-    background-color: #FFD1DC; /* Nền hồng nhạt hơn khi hover */
+    background-color: #ADD8E6; /* Điểm nhấn hồng nhạt khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
 }
 
 /* Dropdown container */
@@ -45,24 +55,25 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #FFB6C1;
+    background-color: #FFD1DC; /* Nền hồng nhạt cho dropdown */
     min-width: 160px;
     z-index: 1000;
     top: 100%;
     left: 0;
     text-align: left;
+    border-radius: 4px; /* Bo góc cho dropdown */
 }
 
 .dropdown-content a {
     display: block;
-    color: #008000;
+    color: #2C3E50; /* Chữ xanh navy */
     padding: 12px 16px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #FFD1DC;
+    background-color: #ADD8E6; /* Điểm nhấn hồng nhạt khi hover */
 }
 
 .dropdown:hover .dropdown-content {
@@ -72,29 +83,32 @@ body {
 /* ----- Tiêu đề ----- */
 
 /* Tiêu đề chính */
-. {
+.header-title {
     font-size: 36px;
-    margin-top: 20px;
+    margin-top: 120px; /* Tăng khoảng cách để cách xa thanh điều hướng */
     margin-bottom: 10px; /* Giảm khoảng cách dưới tiêu đề */
     text-align: center;
-    color: #008000; /* Giữ màu xanh lá đậm */
+    color: #ff69b4; /* Chữ xanh navy */
+    text-shadow: 1px 1px 3px #ff69b4; /* Hiệu ứng đổ bóng nhẹ */
 }
 
 h1 {
     font-size: 36px;
     font-weight: bold;
+    color: #2C3E50; /* Chữ xanh navy */
 }
 
 h2 {
     font-size: 28px;
     font-weight: bold;
+    color: #4A4A4A; /* Chữ xám đậm */
 }
 
 h3 {
     font-size: 22px;
     font-weight: normal;
     font-style: italic;
-    color: #555;
+    color: #4A4A4A; /* Chữ xám đậm */
 }
 
 /* ----- Nội dung chính và văn bản căn giữa ----- */
@@ -143,9 +157,9 @@ h3 {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #ffffff; /* Nền xanh dương nhạt cho các thẻ */
     border-radius: 8px;
-    box-shadow: 0 4px 8px #00000033;
+    box-shadow: 0 4px 8px #000000; /* Đổ bóng nhẹ cho các thẻ */
     overflow: hidden;
     width: 250px;
     display: flex;
@@ -153,6 +167,10 @@ h3 {
     justify-content: space-between;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
 }
 
 .card-img {
@@ -165,13 +183,14 @@ h3 {
 .card-title {
     font-size: 20px;
     margin: 10px 0;
-    color: #FF69B4;
+    color: #FF69B4; /* Màu chữ tiêu đề thẻ */
+    text-shadow: 2px 2px px #000000;
 }
 
 .card-text {
     padding: 0 15px;
     font-size: 14px;
-    color: #333;
+    color: #4A4A4A; /* Chữ trắng cho nội dung thẻ */
     flex-grow: 1;
 }
 
@@ -179,29 +198,234 @@ h3 {
     display: inline-block;
     margin: 10px auto 20px;
     padding: 8px 16px;
-    background-color: #FF69B4;
-    color: white;
+    background-color: #ff69b4; /* Nền hồng đậm cho nút đọc thêm */
+    color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
 .read-more:hover {
-    background-color: #FFB6C1;
+    background-color: #ADD8E6; /* Điểm nhấn xanh dương nhạt khi hover */
 }
 
-/* ----- Form liên hệ ----- */
+/* ----- Phần chân trang ----- */
+
+/* Chân trang */
+.footer {
+    background-color: #FFB6C1; /* Nền chân trang */
+    padding: 10px 0; /* Giảm padding để chân trang ngắn lại */
+    text-align: center;
+    margin-top: 20px; /* Tạo khoảng cách với slideshow */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Đưa logo sang bên trái và footprint sang bên phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa chân trang */
+}
+
+.footer-logo {
+    margin: 0; /* Không có margin */
+}
+
+.student-list {
+    text-align: center; /* Căn giữa cho danh sách sinh viên */
+    margin: 10px 0; /* Khoảng cách giữa danh sách sinh viên và các phần khác */
+}
+
+.student-list p {
+    font-size: 14px; /* Kích thước chữ cho tên thành viên */
+    font-weight: bold;
+}
+
+.student-list table {
+    margin: 0 auto; /* Căn giữa bảng */
+}
+
+.student-list td {
+    padding: 5px 10px; /* Điều chỉnh khoảng cách cho từng ô */
+    font-size: 12px; /* Giảm kích thước chữ cho danh sách thành viên */
+}
+
+.footer-note {
+    margin-top: 10px; /* Giảm khoảng cách trên ghi chú chân trang */
+    font-size: 12px; /* Giảm kích thước chữ cho ghi chú chân trang */
+    color: #4A4A4A; /* Chữ xám đậm */
+    font-style: italic;
+}
+
+/* Các kiểu cơ bản cho carousel */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ccc; /* Tùy chọn: thêm viền */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%; /* Chiếm 100% chiều rộng của khung carousel */
+    height: 400px; /* Chiều cao cố định */
+    object-fit: cover; /* Giữ nguyên tỷ lệ khung hình mà không bị méo */
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FF69B4; /* Nền hồng cho nút */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Các kiểu cho phần video */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+	border-radius: 20px; /* Bo góc cho hình ảnh */
+}
+
+.video-container div {
+    width: 560px;
+    margin: 10px;
+    text-align: center; /* Căn giữa liên kết video */
+}
+/* ----- Slideshow ----- */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /* Ẩn phần thừa */
+    border-radius: 10px; /* Bo góc cho slideshow */
+}
+
+.slideshow {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    display: none; /* Ẩn tất cả các slide ban đầu */
+    flex: 1; /* Chiếm toàn bộ chiều rộng */
+    position: relative;
+}
+
+.slide-image {
+    width: 100%; /* Chiếm 100% chiều rộng */
+    height: 400px; /* Chiều cao cố định */
+    object-fit: cover; /* Giữ nguyên tỷ lệ khung hình mà không bị méo */
+    border-radius: 10px; /* Bo góc cho hình ảnh */
+}
+
+.track-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #000000; /* Nền tối để chữ nổi bật */
+    color: #FFFFFF; /* Chữ trắng */
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px #000000; /* Đổ bóng cho thông tin */
+}
+
+.slideshow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FFFFFF; /* Nền trắng */
+    border: none;
+    color: #FF69B4; /* Màu chữ hồng đậm */
+    padding: 10px;
+    border-radius: 50%; /* Bo tròn cho nút */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+.slideshow-button:hover {
+    background-color: #FF69B4; /* Đổi màu nền khi hover */
+    color: #FFFFFF; /* Đổi màu chữ khi hover */
+    transform: scale(1.1); /* Tăng kích thước nhẹ khi hover */
+}
+/* Phần nền mờ */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #ffffff; /* Nền trắng cho pop-up */
+    padding: 20px;
+    border-radius: 25px;
+    width: 300px;
+    text-align: center;
+    color: #000080; /* Màu chữ xanh navy */
+    box-shadow: 0px 4px 8px #00000033;
+}
+
+.popup-content h2 {
+    color: #000080; /* Màu xanh navy cho tiêu đề */
+}
+
+.popup-content p {
+    color: #000080; /* Màu xanh navy cho đoạn văn */
+}
+
+/* CSS cho nút Home */
+.popup-content button {
+    background-color: #FFC0CB; /* Nền hồng pastel */
+    color: #000080; /* Màu chữ xanh navy */
+    border: none;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+	font-weight: bold;
+	box-shadow: 2px 2px 5px #0000004D; /* Đổ bóng cho nút */
+    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển tiếp cho đổ bóng */
+	
+}
+
+.popup-content button:hover {
+    background-color: #DB7093; /* Nền xanh nhạt hơn khi hover */
+	box-shadow: 7px 7px 10px #00000080; /* Đổ bóng khi hover */
+}
 
 /* Container form liên hệ */
 .contact-container {
     margin: 50px auto;
     width: 60%;
     text-align: center;
-	padding: 40px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  
 }
 
 .contact-form {
@@ -212,15 +436,8 @@ h3 {
 }
 
 .form-group {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     text-align: left;
-	display: flex;
-	
-}
-.submit-container {
-    display: flex; /* Sử dụng Flexbox */
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    margin-top: 20px; /* Khoảng cách trên nút */
 }
 
 label {
@@ -230,24 +447,32 @@ label {
     color: #333;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], textarea {
+input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0 15px 0;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 4px;
     box-sizing: border-box;
 }
-.form-control {
-	width: 90%;
-    padding: 10px;
-    margin: 5px 0 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-	text-align: center;
-	align-items: center;
+
+textarea {
+    resize: vertical;
 }
+fieldset {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+   background-color: #FFF6F5; 
+}
+.form-option {
+    margin-bottom: 15px; /* Khoảng cách dưới mỗi tùy chọn */
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử bên trong */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+
 textarea {
     resize: vertical;
 }
@@ -273,121 +498,29 @@ textarea {
     border-radius: 8px;
     box-shadow: 0 4px 8px #00000033;
 }
-/* General styling for the form */
-
-fieldset {
-  margin-bottom: 30px;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 30px;
-   background-color: #FFF6F5; 
+/* ----- Khung giới thiệu ----- */
+.introduction-box {
+    background-color: #FFB6C1; /* Nền hồng nhạt cho khung giới thiệu */
+    border-radius: 10px; /* Bo góc */
+    padding: 20px; /* Padding cho nội dung */
+    margin: 20px auto; /* Tạo khoảng cách trên và dưới */
+    max-width: 600px; /* Chiều rộng tối đa */
+    box-shadow: 0 4px 8px #00000033; /* Đổ bóng nhẹ cho khung */
+    transition: transform 0.3s ease; /* Thêm hiệu ứng khi hover */
 }
 
-
-
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: 10px;
+.introduction-box:hover {
+    transform: scale(1.02); /* Tăng kích thước nhẹ khi hover */
 }
 
-.form-option {
-    margin-bottom: 15px; /* Khoảng cách dưới mỗi tùy chọn */
-    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử bên trong */
-    align-items: center; /* Căn giữa theo chiều dọc */
+.introduction-box h2 {
+    color: #2C3E50; /* Màu chữ cho tiêu đề */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+    font-size: 24px; /* Kích thước chữ cho tiêu đề */
 }
 
-
-
-.form-check-label {
-  font-size: 16px;
-}
-
-/* Styling for larger form buttons */
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-  font-size: 18px;
-}
-
-select {
-  padding: 12px;
-  border-radius: 8px;
-}
-
-
-
-/* ----- Phần chân trang ----- */
-
-/* Chân trang */
-.footer {
-    background-color: #FFE4E1;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-logo {
-    margin-bottom: 10px;
-}
-
-.logo-img {
-    width: 120px; /* Tăng kích thước logo */
-    height: 120px;
-    margin-bottom: 10px; /* Khoảng cách dưới logo */
-}
-
-.student-list {
-    text-align: center;
-    margin: 10px 0;
-}
-
-.student-list p {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.student-list table {
-    margin: 0 auto;
-}
-
-.student-list td {
-    padding: 5px 15px;
-}
-
-.footer-note {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #008000;
-    font-style: italic;
-}
-
-.video-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.video-container iframe {
-    width: 300px;
-    height: 200px;
-    margin: 10px;
-}
-
-.artist-carousel {
-    margin: 20px auto;
-    width: 80%;
-}
-
-.artist-carousel div {
-    text-align: center;
-}
-
-.artist-carousel img {
-    width: 100%;
-    height: auto;
+.introduction-box p {
+    color: #4A4A4A; /* Màu chữ cho nội dung */
+    line-height: 1.6; /* Khoảng cách dòng */
+    font-size: 16px; /* Kích thước chữ cho nội dung */
 }

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -9,10 +10,11 @@
 <body>
   <!-- Thanh điều hướng -->
   <div class="navbar">
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active-home">Home</a>
     <a href="genres.html">Genres</a>
     <a href="charity.html">Charity</a>
     <a href="spotify.html">Spotify</a>
+
 	
     <div class="dropdown">
         <a href="vietnamese.html" class="dropbtn">Vietnam</a>
@@ -23,68 +25,112 @@
             <a href="karaoke.html">Karaoke</a>
         </div>
     </div>
+
     <a href="contact.html">Contact</a>
   </div>
 
   <!-- Tiêu đề chính -->
   <h1 class="header-title">Vietnamese Music</h1>
 
-  <!-- Tiêu đề phụ -->
-  <h3 class="sub-section-title">Discover the Vibrant Music Scene of Vietnam</h3>
+  <!-- Video YouTube -->
 
-  <!-- Lời dẫn -->
-  <div class="intro-text">
-    <p>
-      Vietnamese pop music is filled with talented singers and musicians, 
-      from traditional ballads to urban hip-hop beats and EDM riffs. 
-      Here are some of the stars who are redefining the pop genre in Vietnam.
-    </p>
-  </div>
-
-  <!-- YouTube Videos -->
-  <div class="video-container">
-    <h3>Featured Videos</h3>
+  <h3>Featured Videos</h3>
+<div class="video-container">
     <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/_E8bCggTnGg" frameborder="0" allowfullscreen></iframe>
-      <a href="https://www.youtube.com/watch?v=_E8bCggTnGg" target="_blank">Watch on YouTube</a>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/o2ANmHs5b8o" frameborder="0" allowfullscreen></iframe>
+        <p>Song: Kim phút Kim giờ</p>
     </div>
     <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/n2fNa-a0J0M" frameborder="0" allowfullscreen></iframe>
-      <a href="https://www.youtube.com/watch?v=n2fNa-a0J0M" target="_blank">Watch on YouTube</a>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/n2fNa-a0J0M" frameborder="0" allowfullscreen></iframe>
+        <p>Song: Đi giữa trời rực rỡ</p>
     </div>
     <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VHrLPs3_1Fs" frameborder="0" allowfullscreen></iframe>
-      <a href="https://www.youtube.com/watch?v=VHrLPs3_1Fs" target="_blank">Watch on YouTube</a>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LWzxnYB8K08" frameborder="0" allowfullscreen></iframe>
+        <p>Song: Regret</p>
     </div>
     <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/UtF6Jej8yb4" frameborder="0" allowfullscreen></iframe>
-      <a href="https://www.youtube.com/watch?v=UtF6Jej8yb4" target="_blank">Watch on YouTube</a>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qRuSS93OEfw" frameborder="0" allowfullscreen></iframe>
+        <p>Song: Tràn bộ nhớ</p>
     </div>
     <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/sJt_i0hOugA" frameborder="0" allowfullscreen></iframe>
-      <a href="https://www.youtube.com/watch?v=sJt_i0hOugA" target="_blank">Watch on YouTube</a>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pMWB3icf6c4" frameborder="0" allowfullscreen></iframe>
+        <p>Song: Anh biết rồi</p>
     </div>
-  </div>
+</div>
 	
-  <!-- Carousel for Artists -->
+  <!-- Carousel cho nghệ sĩ -->
   <div class="carousel">
     <h3>Artist Carousel</h3>
     <div class="carousel-images">
       <img src="image/img_son_tung.png" alt="Son Tung M-TP">
       <img src="image/img_min.png" alt="MIN">
-      <img src="image /img_my_tam.png" alt="My Tam">
+      <img src="image/img_buc_tuong.jpg" alt="Buc Tuong">
+      <img src="image/img_suboi.png" alt="Suboi">
+      <img src="image/img_my_tam.png" alt="My Tam">
       <img src="image/img_soobin.png" alt="Soobin Hoang Son">
       <img src="image/img_huong_tram.png" alt="Huong Tram">
       <img src="image/img_only_c.png" alt="Only C">
       <img src="image/img_dong_nhi.png" alt="Dong Nhi">
       <img src="image/img_justaTee.png" alt="JustaTee">
-      <img src="image/img_karik.png" alt="Kar ik">
-      <img src="image/img_hoang_thuy_linh.png" alt="Hoang Thuy Linh">
     </div>
-    <button class="carousel-button prev">Prev</button>
-    <button class="carousel-button next">Next</button>
+    <button class="carousel-button prev" onclick="moveSlide(-1)">Prev</button>
+    <button class="carousel-button next" onclick="moveSlide(1)">Next</button>
   </div>
 
+  <!-- Chân trang -->
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="image/img_logo.png" alt="Group 4 Logo" class="logo-img">
+      </div>
 
+      <!-- Danh sách sinh viên -->
+      <div class="student-list">
+        <p>Group 4 - Members:</p>
+        <table>
+          <tr>
+            <td>Nguyễn Thị Việt An - 11220045</td>
+            <td>Lê Quỳnh Anh - 11220265</td>
+          </tr>
+          <tr>
+            <td>Lâm Tuấn Hưng - 11222603</td>
+            <td>Cao Tiến Phúc - 11225128</td>
+          </tr>
+          <tr>
+            <td>Phan Thị Phương Thảo - 11225967</td>
+            <td>Dương Thị Thư - 11226075</td>
+          </tr>
+        </table>
+      </div>
+
+      <p class="footer-note">© 2024 Music Haven - Feel the Beat, Live the Rhythm</p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript cho chức năng carousel
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-images img');
+
+    function showSlide(index) {
+      if (index >= images.length/2) {
+        currentIndex = 0; // Reset về hình ảnh đầu tiên
+      } else if (index < 0) {
+        currentIndex = images.length - 1; // Về hình ảnh cuối cùng
+      } else {
+        currentIndex = index;
+      }
+      const offset = -currentIndex * 100; // Mỗi hình ảnh chiếm toàn bộ chiều rộng
+      document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+    }
+
+    function moveSlide(direction) {
+      showSlide(currentIndex + direction);
+    }
+
+    // Hiển thị hình ảnh đầu tiên khi tải
+    showSlide(currentIndex);
+  </script>
 </body>
 </html>
